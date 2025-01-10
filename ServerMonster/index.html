@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Monster Data</h1>
+    <table id="monstersTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Game</th>
+                <th>Type</th>
+                <th>Threat Level</th>
+                <th>Weakness</th>
+                <th>Habitat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be populated dynamically -->
+        </tbody>
+    </table>
+
+    <script>
+        async function fetchMonsters() {
+            try {
+                const response = await fetch("http://localhost:3000/monsters");
+                const monsters = await response.json();
+
+                const tableBody = document.getElementById("monstersTable").querySelector("tbody");
+
+                monsters.forEach(monster => {
+                    const row = document.createElement("tr");
+
+                    row.innerHTML = `
+                        <td>${monster.name[0]}</td>
+                        <td>${monster.game[0]}</td>
+                        <td>${monster.type[0]}</td>
+                        <td>${monster.threat_level[0]}</td>
+                        <td>${monster.weakness[0]}</td>
+                        <td>${monster.habitat[0]}</td>
+                    `;
+
+                    tableBody.appendChild(row);
+                });
+            } catch (error) {
+                console.error("Error fetching monster data:", error);
+            }
+        }
+
+        // Fetch and display monster data on page load
+        fetchMonsters();
+    </script>
+</body>
+</html>

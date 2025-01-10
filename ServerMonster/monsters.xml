@@ -1,0 +1,35 @@
+<monsters>
+    <monster>
+        <name>Nergigante</name>
+        <game>Monster Hunter World</game>
+        <type>Elder Dragon</type>
+        <threat_level>High</threat_level>
+        <weakness>Thunder</weakness>
+        <habitat>Ancient Forest, Elder's Recess</habitat>
+    </monster>
+    <monster>
+        <name>Rathalos</name>
+        <game>Monster Hunter World</game>
+        <type>Flying Wyvern</type>
+        <threat_level>Moderate</threat_level>
+        <weakness>Dragon, Thunder</weakness>
+        <habitat>Ancient Forest</habitat>
+    </monster>
+    <monster>
+        <name>Astalos</name>
+        <game>Monster Hunter Generations Ultimate</game>
+        <type>Flying Wyvern</type>
+        <threat_level>Moderate</threat_level>
+        <weakness>Ice</weakness>
+        <habitat>Verdant Hills, Jurassic Frontier</habitat>
+    </monster>
+    <monster>
+        <name>Mizutsune</name>
+        <game>Monster Hunter Generations Ultimate</game>
+        <type>Leviathan</type>
+        <threat_level>Moderate</threat_level>
+        <weakness>Thunder</weakness>
+        <habitat>Verdant Hills, Misty Peaks</habitat>
+    </monster>
+    <!-- Add more monster entries if needed -->
+</monsters>
