@@ -32,6 +32,13 @@
             text-align: center;
             color: #333;
         }
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit:contain;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -39,12 +46,13 @@
     <table id="monstersTable">
         <thead>
             <tr>
+                <th>Image</th>
                 <th>Name</th>
-                <th>Game</th>
                 <th>Type</th>
                 <th>Threat Level</th>
                 <th>Weakness</th>
                 <th>Habitat</th>
+                <th>Description</th>
             </tr>
         </thead>
         <tbody>
@@ -64,12 +72,14 @@
                     const row = document.createElement("tr");
 
                     row.innerHTML = `
+                        <td><img src="${monster.image[0]}" alt="${monster.name[0]}"></td>
                         <td>${monster.name[0]}</td>
-                        <td>${monster.game[0]}</td>
                         <td>${monster.type[0]}</td>
                         <td>${monster.threat_level[0]}</td>
                         <td>${monster.weakness[0]}</td>
                         <td>${monster.habitat[0]}</td>
+                        <td>${monster.description[0]}</td>
+
                     `;
 
                     tableBody.appendChild(row);
