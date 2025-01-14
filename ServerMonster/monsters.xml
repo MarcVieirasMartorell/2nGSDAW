@@ -1,35 +1,317 @@
 <monsters>
     <monster>
         <name>Nergigante</name>
-        <game>Monster Hunter World</game>
+        <image>..\ServerShare\images\nergigante.png</image>
         <type>Elder Dragon</type>
         <threat_level>High</threat_level>
         <weakness>Thunder</weakness>
         <habitat>Ancient Forest, Elder's Recess</habitat>
+        <description>A powerful Elder Dragon known for its aggressive nature and ability to regenerate its spikes after they are destroyed.</description>
     </monster>
     <monster>
         <name>Rathalos</name>
-        <game>Monster Hunter World</game>
+        <image>..\ServerShare\images\rathalos.png</image>
         <type>Flying Wyvern</type>
         <threat_level>Moderate</threat_level>
         <weakness>Dragon, Thunder</weakness>
         <habitat>Ancient Forest</habitat>
+        <description>Often called the King of the Skies, Rathalos is a fearsome predator capable of raining fire from above.</description>
     </monster>
     <monster>
-        <name>Astalos</name>
-        <game>Monster Hunter Generations Ultimate</game>
+        <name>Teostra</name>
+        <image>..\ServerShare\images\teostra.png</image>
+        <type>Elder Dragon</type>
+        <threat_level>High</threat_level>
+        <weakness>Water, Ice</weakness>
+        <habitat>Volcanic Region</habitat>
+        <description>Teostra is an Elder Dragon that uses intense fire attacks and controls explosions with its fiery mane.</description>
+    </monster>
+    <monster>
+        <name>Kushala Daora</name>
+        <image>..\ServerShare\images\kushala_daora.png</image>
+        <type>Elder Dragon</type>
+        <threat_level>High</threat_level>
+        <weakness>Thunder, Fire</weakness>
+        <habitat>Coral Highlands</habitat>
+        <description>Known for controlling winds, Kushala Daora can create violent storms to deflect attacks.</description>
+    </monster>
+    <monster>
+        <name>Vaal Hazak</name>
+        <image>..\ServerShare\images\vaal_hazak.png</image>
+        <type>Elder Dragon</type>
+        <threat_level>High</threat_level>
+        <weakness>Dragon, Water</weakness>
+        <habitat>Rotten Vale</habitat>
+        <description>A grotesque Elder Dragon with the ability to corrupt its surroundings with poisonous miasma.</description>
+    </monster>
+    <monster>
+        <name>Legiana</name>
+        <image>..\ServerShare\images\legiana.png</image>
         <type>Flying Wyvern</type>
         <threat_level>Moderate</threat_level>
-        <weakness>Ice</weakness>
-        <habitat>Verdant Hills, Jurassic Frontier</habitat>
+        <weakness>Thunder, Fire</weakness>
+        <habitat>Coral Highlands</habitat>
+        <description>A graceful yet deadly flying wyvern that uses cold-based attacks to freeze its prey.</description>
     </monster>
     <monster>
-        <name>Mizutsune</name>
-        <game>Monster Hunter Generations Ultimate</game>
-        <type>Leviathan</type>
-        <threat_level>Moderate</threat_level>
-        <weakness>Thunder</weakness>
-        <habitat>Verdant Hills, Misty Peaks</habitat>
+        <name>Diablos</name>
+        <image>..\ServerShare\images\diablos.png</image>
+        <type>Flying Wyvern</type>
+        <threat_level>High</threat_level>
+        <weakness>Water, Ice</weakness>
+        <habitat>Wildspire Waste</habitat>
+        <description>Diablos is an aggressive and territorial monster known for its powerful charges and brutal attacks.</description>
     </monster>
-    <!-- Add more monster entries if needed -->
+    <monster>
+        <name>Great Jagras</name>
+        <image>..\ServerShare\images\great_jagras.png</image>
+        <type>Large Monster</type>
+        <threat_level>Low</threat_level>
+        <weakness>Water, Fire</weakness>
+        <habitat>Ancient Forest</habitat>
+        <description>A large and slow-moving predator that hunts in packs. It is known for its ability to devour smaller creatures.</description>
+    </monster>
+    <monster>
+        <name>Anjanath</name>
+        <image>..\ServerShare\images\anjanath.png</image>
+        <type>Fanged Wyvern</type>
+        <threat_level>Moderate</threat_level>
+        <weakness>Water, Ice</weakness>
+        <habitat>Wildspire Waste</habitat>
+        <description>Anjanath is a large, carnivorous wyvern with a long neck and a fearsome fire breath.</description>
+    </monster>
+    <monster>
+        <name>Barroth</name>
+        <image>..\ServerShare\images\barroth.png</image>
+        <type>Fanged Beast</type>
+        <threat_level>Moderate</threat_level>
+        <weakness>Water, Ice</weakness>
+        <habitat>Wildspire Waste</habitat>
+        <description>Barroth is a formidable monster with a large, armor-like hide that can be used as a weapon in combat.</description>
+    </monster>
+    <monster>
+        <name>Odogaron</name>
+        <image>..\ServerShare\images\odogaron.png</image>
+        <type>Fanged Wyvern</type>
+        <threat_level>Moderate</threat_level>
+        <weakness>Fire, Ice</weakness>
+        <habitat>Ancient Forest</habitat>
+        <description>A predatory wyvern known for its fast, vicious attacks and terrifying agility.</description>
+    </monster>
+    <monster>
+        <name>Radobaan</name>
+        <image>..\ServerShare\images\radobaan.png</image>
+        <type>Armored</type>
+        <threat_level>Low</threat_level>
+        <weakness>Water</weakness>
+        <habitat>Wildspire Waste</habitat>
+        <description>An armored creature that rolls into a ball and uses its tough shell for defense.</description>
+    </monster>
+    <monster>
+        <name>Bazelgeuse</name>
+        <image>..\ServerShare\images\bazelgeuse.png</image>
+        <type>Flying Wyvern</type>
+        <threat_level>High</threat_level>
+        <weakness>Thunder, Dragon</weakness>
+        <habitat>Wildspire Waste, Elder's Recess</habitat>
+        <description>Bazelgeuse is a bomb-dropping wyvern known for its explosive attacks and deadly aerial combat skills.</description>
+    </monster>
+    <monster>
+        <name>Xeno'jiiva</name>
+        <image>..\ServerShare\images\xenojiiva.png</image>
+        <type>Elder Dragon</type>
+        <threat_level>High</threat_level>
+        <weakness>Dragon, Ice</weakness>
+        <habitat>Research Base</habitat>
+        <description>An Elder Dragon that appears to have extraterrestrial origins, known for its potent energy attacks.</description>
+    </monster>
+    <monster>
+        <name>Rathian</name>
+        <image>..\ServerShare\images\rathian.png</image>
+        <type>Flying Wyvern</type>
+        <threat_level>Moderate</threat_level>
+        <weakness>Water, Ice</weakness>
+        <habitat>Ancient Forest</habitat>
+        <description>Rathian, known as the Queen of the Land, uses poison as her primary means of defense and attack.</description>
+    </monster>
+    <monster>
+        <name>Behemoth</name>
+        <image>..\ServerShare\images\behemoth.png</image>
+        <type>Legendary Monster</type>
+        <threat_level>Extreme</threat_level>
+        <weakness>Thunder, Dragon</weakness>
+        <habitat>Special Event</habitat>
+        <description>A legendary monster from another world, Behemoth is a massive beast with devastating attacks and powerful shockwaves.</description>
+    </monster>
+    <monster>
+        <name>Zorah Magdaros</name>
+        <image>..\ServerShare\images\zorah_magdaros.png</image>
+        <type>Elder Dragon</type>
+        <threat_level>Moderate</threat_level>
+        <weakness>Water</weakness>
+        <habitat>Great Ravine</habitat>
+        <description>Zorah Magdaros is a colossal Elder Dragon that exudes magma, threatening to destroy entire regions.</description>
+    </monster>
+    <monster>
+        <name>Viper Tobi-Kadachi</name>
+        <image>..\ServerShare\images\viper_tobi_kadachi.png</image>
+        <type>Flying Wyvern</type>
+        <threat_level>Moderate</threat_level>
+        <weakness>Fire, Ice</weakness>
+        <habitat>Wildspire Waste</habitat>
+        <description>A venomous variant of the Tobi-Kadachi, known for its electrified attacks and agility.</description>
+    </monster>
+    <monster>
+        <name>Paolumu</name>
+        <image>..\ServerShare\images\paolumu.png</image>
+        <type>Flying Wyvern</type>
+        <threat_level>Low</threat_level>
+        <weakness>Thunder, Ice</weakness>
+        <habitat>Coral Highlands</habitat>
+        <description>Paolumu is a flying wyvern with the ability to inflate its body to release gusts of air and create wind-based attacks.</description>
+    </monster>
+    <monster>
+        <name>Shara Ishvalda</name>
+        <image>..\ServerShare\images\shara_ishvalda.png</image>
+        <type>Elder Dragon</type>
+        <threat_level>High</threat_level>
+        <weakness>Dragon, Ice</weakness>
+        <habitat>Volcanic Region</habitat>
+        <description>Shara Ishvalda is an Elder Dragon that can manipulate the ground, causing earthquakes and disrupting the environment.</description>
+    </monster>
+    <monster>
+        <name>Lavasioth</name>
+        <image>..\ServerShare\images\lavasioth.png</image>
+        <type>Fish Monster</type>
+        <threat_level>Moderate</threat_level>
+        <weakness>Water, Ice</weakness>
+        <habitat>Volcanic Region</habitat>
+        <description>A fish-like monster that thrives in molten environments, attacking with its powerful tail and volcanic blasts.</description>
+    </monster>
+        <monster>
+        <name>Pukei-Pukei</name>
+        <image>../ServerShare/images/pukei_pukei.png</image>
+        <type>Bird Wyvern</type>
+        <threat_level>Low</threat_level>
+        <weakness>Thunder</weakness>
+        <habitat>Ancient Forest, Wildspire Waste</habitat>
+        <description>A colorful wyvern that uses its long tongue and poisonous attacks to defend itself.</description>
+    </monster>
+    <monster>
+        <name>Tzitzi-Ya-Ku</name>
+        <image>../ServerShare/images/tzitzi_ya_ku.png</image>
+        <type>Bird Wyvern</type>
+        <threat_level>Low</threat_level>
+        <weakness>Thunder</weakness>
+        <habitat>Coral Highlands</habitat>
+        <description>A wyvern that uses its photophores to create blinding flashes of light, stunning prey and predators alike.</description>
+    </monster>
+    <monster>
+        <name>Kulu-Ya-Ku</name>
+        <image>../ServerShare/images/kulu_ya_ku.png</image>
+        <type>Bird Wyvern</type>
+        <threat_level>Low</threat_level>
+        <weakness>Water</weakness>
+        <habitat>Ancient Forest, Wildspire Waste</habitat>
+        <description>Kulu-Ya-Ku is known for its ability to dig up rocks or pot-like items to use as shields or weapons.</description>
+    </monster>
+    <monster>
+        <name>Tigrex</name>
+        <image>../ServerShare/images/tigrex.png</image>
+        <type>Flying Wyvern</type>
+        <threat_level>High</threat_level>
+        <weakness>Thunder, Dragon</weakness>
+        <habitat>Hoarfrost Reach, Elder's Recess</habitat>
+        <description>A ferocious wyvern with incredible speed and strength, capable of causing devastating damage with its roar.</description>
+    </monster>
+    <monster>
+        <name>Nargacuga</name>
+        <image>../ServerShare/images/nargacuga.png</image>
+        <type>Flying Wyvern</type>
+        <threat_level>High</threat_level>
+        <weakness>Thunder, Fire</weakness>
+        <habitat>Ancient Forest, Hoarfrost Reach</habitat>
+        <description>An agile wyvern that uses its tail as a powerful weapon and relies on stealth to ambush prey.</description>
+    </monster>
+    <monster>
+        <name>Velkhana</name>
+        <image>../ServerShare/images/velkhana.png</image>
+        <type>Elder Dragon</type>
+        <threat_level>High</threat_level>
+        <weakness>Fire</weakness>
+        <habitat>Hoarfrost Reach</habitat>
+        <description>A graceful Elder Dragon that wields ice-based attacks, creating structures of frost to trap its enemies.</description>
+    </monster>
+    <monster>
+        <name>Brachydios</name>
+        <image>../ServerShare/images/brachydios.png</image>
+        <type>Brute Wyvern</type>
+        <threat_level>High</threat_level>
+        <weakness>Water, Ice</weakness>
+        <habitat>Elder's Recess</habitat>
+        <description>A brutish wyvern that coats its fists in explosive slime to pummel opponents.</description>
+    </monster>
+    <monster>
+        <name>Glavenus</name>
+        <image>../ServerShare/images/glavenus.png</image>
+        <type>Brute Wyvern</type>
+        <threat_level>High</threat_level>
+        <weakness>Water</weakness>
+        <habitat>Wildspire Waste, Elder's Recess</habitat>
+        <description>Glavenus wields its sword-like tail to slash at foes, heating it to searing temperatures for devastating attacks.</description>
+    </monster>
+    <monster>
+        <name>Kirin</name>
+        <image>../ServerShare/images/kirin.png</image>
+        <type>Elder Dragon</type>
+        <threat_level>High</threat_level>
+        <weakness>Fire</weakness>
+        <habitat>Coral Highlands</habitat>
+        <description>Kirin is a mystical Elder Dragon that summons powerful lightning strikes to protect itself and overwhelm hunters.</description>
+    </monster>
+        <monster>
+        <name>Tobi-Kadachi</name>
+        <image>../ServerShare/images/tobi_kadachi.png</image>
+        <type>Fanged Wyvern</type>
+        <threat_level>Moderate</threat_level>
+        <weakness>Fire, Water</weakness>
+        <habitat>Ancient Forest</habitat>
+        <description>An electric wyvern that uses its agility to move swiftly through the trees and deliver shocking attacks.</description>
+    </monster>
+    <monster>
+        <name>Great Girros</name>
+        <image>../ServerShare/images/great_girros.png</image>
+        <type>Fanged Wyvern</type>
+        <threat_level>Low</threat_level>
+        <weakness>Fire, Water</weakness>
+        <habitat>Rotten Vale</habitat>
+        <description>The leader of the Girros pack, capable of inflicting paralysis with its fangs.</description>
+    </monster>
+    <monster>
+        <name>Deviljho</name>
+        <image>../ServerShare/images/deviljho.png</image>
+        <type>Brute Wyvern</type>
+        <threat_level>Extreme</threat_level>
+        <weakness>Dragon, Thunder</weakness>
+        <habitat>All regions</habitat>
+        <description>A terrifying wyvern that devours anything in its path, known as the "World Eater."</description>
+    </monster>
+    <monster>
+        <name>Azure Rathalos</name>
+        <image>../ServerShare/images/azure_rathalos.png</image>
+        <type>Flying Wyvern</type>
+        <threat_level>High</threat_level>
+        <weakness>Dragon, Thunder</weakness>
+        <habitat>Ancient Forest, Elder's Recess</habitat>
+        <description>A subspecies of Rathalos with a more aggressive demeanor and enhanced aerial capabilities.</description>
+    </monster>
+    <monster>
+        <name>Pink Rathian</name>
+        <image>../ServerShare/images/pink_rathian.png</image>
+        <type>Flying Wyvern</type>
+        <threat_level>High</threat_level>
+        <weakness>Dragon, Thunder</weakness>
+        <habitat>Coral Highlands</habitat>
+        <description>A rare subspecies of Rathian with stronger toxins and increased combat prowess.</description>
+    </monster>
 </monsters>
