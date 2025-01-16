@@ -3,94 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monster Data</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        tr:hover {
-            background-color: #f1f1f1;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        img {
-            width: 100px;
-            height: 100px;
-            object-fit:contain;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-    </style>
+    <title>Monster Carousel</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Monster Data</h1>
-    <table id="monstersTable">
-        <thead>
-            <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Threat Level</th>
-                <th>Weakness</th>
-                <th>Habitat</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Rows will be populated dynamically -->
-        </tbody>
-    </table>
+    <div class="volume-control">
+        <label for="volumeSlider">Volume</label>
+        <i class="fas fa-volume-up"></i>
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+    </div>
+    <div class="carousel-container">
+        <div class="carousel" id="carousel">
+            <!-- Tarjetas dinámicas -->
+        </div>
+        <div class="controls">
+            <button id="prev">◀️ Previous</button>
+            <button id="next">Next ▶️</button>
+        </div>
+    </div>
 
-    <script>
-        async function fetchMonsters() {
-            try {
-                const response = await fetch("http://localhost:3000/monsters");
-                const monsters = await response.json();
-
-                const tableBody = document.getElementById("monstersTable").querySelector("tbody");
-
-                monsters.forEach(monster => {
-                    const row = document.createElement("tr");
-
-                    row.innerHTML = `
-                        <td><img src="${monster.image[0]}" alt="${monster.name[0]}"></td>
-                        <td>${monster.name[0]}</td>
-                        <td>${monster.type[0]}</td>
-                        <td>${monster.threat_level[0]}</td>
-                        <td>${monster.weakness[0]}</td>
-                        <td>${monster.habitat[0]}</td>
-                        <td>${monster.description[0]}</td>
-
-                    `;
-
-                    tableBody.appendChild(row);
-                });
-            } catch (error) {
-                console.error("Error fetching monster data:", error);
-            }
-        }
-
-        // Fetch and display monster data on page load
-        fetchMonsters();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
