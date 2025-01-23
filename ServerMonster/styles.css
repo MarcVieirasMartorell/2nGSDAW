@@ -41,6 +41,7 @@ body {
     top: 20px;
     left: 20px;
     background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
     padding: 10px;
     border-radius: 10px;
     color: white;
@@ -49,7 +50,16 @@ body {
 }
 
 .search-bar label {
+    font-family: 'MonHunFont', sans-serif;
+
     margin-right: 10px;
+}
+
+.search-bar button {
+    font-family: 'MonHunFont', sans-serif;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, o.9);
+
 }
 
 #volumeSlider {
@@ -135,7 +145,8 @@ body {
 }
 
 .card button:hover {
-    background-color: #0056b3;
+    transform: scale(1.1);
+
 }
 
 /* Central card */
@@ -173,7 +184,7 @@ body {
 
 .controls {
     position: absolute;
-    bottom: -120px;
+    bottom: -140px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -200,4 +211,45 @@ body {
 
 .controls button:hover {
     transform: scale(1.1);
+}
+
+.search-container {
+    position: relative;
+    display: inline-block; /* Asegura que el contenedor se ajuste al tamaño del input */
+}
+
+#searchInput {
+    width: 300px;
+    padding: 10px;
+}
+
+#suggestions {
+    position: absolute;
+    top: 100%; /* Justo debajo del input */
+    left: 0;
+    width: 100%; /* Alineado con el ancho del input */
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    border-top: none; /* Para que no haya doble borde con el input */
+    max-height: 200px; /* Para evitar que la lista sea demasiado grande */
+    overflow-y: auto; /* Agrega scroll si hay muchas sugerencias */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#suggestions li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#suggestions li:hover {
+    background-color: #f0f0f0;
+}
+
+.hidden {
+    display: none;
 }

@@ -1,6 +1,7 @@
 let currentIndex = 0;
 let allMonsters = []; // Almacena todos los monstruos para la búsqueda
 
+// Fetch de los datos de monstruos desde el servidor
 async function fetchMonsters() {
     try {
         const response = await fetch("http://localhost:3000/monsters");
@@ -11,6 +12,7 @@ async function fetchMonsters() {
     }
 }
 
+// Renderiza el carrusel con los datos de los monstruos
 function renderCarousel(monsters) {
     const carousel = document.getElementById("carousel");
     carousel.innerHTML = ""; // Limpiamos el carrusel antes de renderizar
@@ -36,6 +38,7 @@ function renderCarousel(monsters) {
     updateCarousel(monsters.length);
 }
 
+// Actualiza la posición del carrusel según el índice actual
 function updateCarousel(totalMonsters) {
     const cards = document.querySelectorAll(".card");
 
@@ -70,6 +73,50 @@ function updateCarousel(totalMonsters) {
     });
 }
 
+// Filtra y muestra sugerencias basadas en el texto ingresado
+function filterSuggestions() {
+    const searchInput = document.getElementById("searchInput").value.toLowerCase().trim();
+    const suggestions = document.getElementById("suggestions");
+
+    suggestions.innerHTML = ""; // Limpia las sugerencias
+
+    if (searchInput === "") {
+        suggestions.classList.add("hidden");
+        return;
+    }
+
+    const filteredMonsters = allMonsters.filter(monster =>
+        monster.name[0].toLowerCase().includes(searchInput)
+    );
+
+    if (filteredMonsters.length > 0) {
+        suggestions.classList.remove("hidden");
+        filteredMonsters.forEach(monster => {
+            const li = document.createElement("li");
+            li.textContent = monster.name[0];
+            li.addEventListener("click", () => {
+                // Actualiza el input con el nombre del monstruo seleccionado
+                document.getElementById("searchInput").value = monster.name[0];
+
+                // Encuentra el índice en el array completo
+                currentIndex = allMonsters.findIndex(m => m.name[0] === monster.name[0]);
+
+                if (currentIndex !== -1) {
+                    updateCarousel(allMonsters.length); // Actualiza el carrusel
+                }
+
+                // Oculta las sugerencias
+                suggestions.classList.add("hidden");
+            });
+            suggestions.appendChild(li);
+        });
+    } else {
+        suggestions.classList.add("hidden");
+    }
+}
+
+
+// Búsqueda directa mediante botón
 function searchMonsters() {
     const searchInput = document.getElementById("searchInput").value.toLowerCase();
     const monsterIndex = allMonsters.findIndex(monster =>
@@ -77,7 +124,6 @@ function searchMonsters() {
     );
 
     if (monsterIndex !== -1) {
-        // Actualiza el índice del carrusel al del monstruo buscado
         currentIndex = monsterIndex;
         updateCarousel(allMonsters.length);
     } else {
@@ -85,42 +131,19 @@ function searchMonsters() {
     }
 }
 
-
+// Eventos de los botones de navegación del carrusel
+document.getElementById("searchInput").addEventListener("input", filterSuggestions);
 document.getElementById("searchButton").addEventListener("click", searchMonsters);
-
 document.getElementById("prev").addEventListener("click", () => {
     const totalMonsters = document.querySelectorAll(".card").length;
     currentIndex = (currentIndex - 1 + totalMonsters) % totalMonsters;
     updateCarousel(totalMonsters);
 });
-
 document.getElementById("next").addEventListener("click", () => {
     const totalMonsters = document.querySelectorAll(".card").length;
     currentIndex = (currentIndex + 1) % totalMonsters;
     updateCarousel(totalMonsters);
 });
 
-function filterSearchResults() {
-    const searchInput = document.getElementById("searchInput").value.toLowerCase();
-    const searchResults = document.getElementById("searchResults");
-    searchResults.innerHTML = ""; // Limpia la lista
-
-    allMonsters.forEach((monster, index) => {
-        if (monster.name[0].toLowerCase().includes(searchInput)) {
-            const li = document.createElement("li");
-            li.innerHTML = `
-                <img src="${monster.image[0]}" alt="${monster.name[0]}">
-                ${monster.name[0]}
-            `;
-            li.addEventListener("click", () => {
-                currentIndex = index;
-                updateCarousel(allMonsters.length);
-                searchResults.innerHTML = ""; // Limpia los resultados
-                document.getElementById("searchInput").value = ""; // Limpia el input
-            });
-            searchResults.appendChild(li);
-        }
-    });
-}
-
+// Inicialización
 fetchMonsters();

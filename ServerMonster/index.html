@@ -15,9 +15,11 @@
     </div>
     <!-- Barra de búsqueda -->
     <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search for a monster...">
+        <input type="text" id="searchInput" placeholder="Search for a monster..." oninput="filterSuggestions()">
         <button id="searchButton">Search</button>
+        <ul id="suggestions" class="hidden"></ul> <!-- Lista desplegable -->
     </div>
+    
     <div class="carousel-container">
         <div class="carousel" id="carousel">
             <!-- Tarjetas dinámicas -->
