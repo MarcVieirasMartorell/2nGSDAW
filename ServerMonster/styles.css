@@ -31,6 +31,17 @@ body {
     display: flex;
     align-items: center;
 }
+.toggleMode button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
 
 .volume-control label {
     margin-right: 10px;
@@ -56,9 +67,15 @@ body {
 }
 
 .search-bar button {
+    color: white;
     font-family: 'MonHunFont', sans-serif;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, o.9);
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+.search-bar button:hover {
+    transform: scale(1.1);
 
 }
 
@@ -149,7 +166,6 @@ body {
 
 }
 
-/* Central card */
 .card.center {
     transform: translateX(0) scale(1.2);
     opacity: 1;
@@ -192,11 +208,11 @@ body {
 
 .controls button {
     font-family: 'MonHunFont', sans-serif;
-    width: 2100px; /* Ancho fijo */
-    height: 50px; /* Alto fijo */
-    text-align: center; /* Centrar el texto horizontalmente */
-    overflow: hidden; /* Ocultar texto si es demasiado largo */
-    white-space: nowrap; /* Evitar que el texto se parta en varias líneas */
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
     padding: 10px 20px;
     font-size: 20px;
     background-image: url('../ServerShare/backgrounds/horizontal_bg.jpg');
@@ -215,7 +231,7 @@ body {
 
 .search-container {
     position: relative;
-    display: inline-block; /* Asegura que el contenedor se ajuste al tamaño del input */
+    display: inline-block;
 }
 
 #searchInput {
@@ -225,15 +241,15 @@ body {
 
 #suggestions {
     position: absolute;
-    top: 100%; /* Justo debajo del input */
+    top: 100%;
     left: 0;
-    width: 100%; /* Alineado con el ancho del input */
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 5px;
-    border-top: none; /* Para que no haya doble borde con el input */
-    max-height: 200px; /* Para evitar que la lista sea demasiado grande */
-    overflow-y: auto; /* Agrega scroll si hay muchas sugerencias */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    border-top: none;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -252,4 +268,33 @@ body {
 
 .hidden {
     display: none;
+}
+
+.left-page {
+    transform-origin: right center;
+    transform: rotateY(0deg) translateX(-165px); /* Aumenta la separación */
+}
+
+.right-page {
+    transform-origin: left center;
+    transform: rotateY(0deg) translateX(165px); /* Aumenta la separación */
+}
+
+
+@keyframes flipLeft {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(-20deg);
+    }
+}
+
+@keyframes flipRight {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(20deg);
+    }
 }
