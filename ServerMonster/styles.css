@@ -270,31 +270,59 @@ body {
     display: none;
 }
 
-.left-page {
-    transform-origin: right center;
+#book-container {
+    position: absolute;
+    bottom: -700px; /* Lo ocultamos inicialmente */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 0.5s ease-in-out;
+    z-index: 0; /* Debe estar detrás de las cartas */
+}
+
+#book-image {
+    width: 900px; /* Ajusta según tu imagen */
+    /*opacity: 0.8;  Leve transparencia para que no opaque las cartas */
+}
+
+
+
+.book-mode .left-page {
     transform: rotateY(0deg) translateX(-165px); /* Aumenta la separación */
+
+    animation: flipLeft 0.6s ease-in-out forwards;
 }
 
-.right-page {
-    transform-origin: left center;
+.book-mode .right-page {
     transform: rotateY(0deg) translateX(165px); /* Aumenta la separación */
-}
 
+    animation: flipRight 0.6s ease-in-out forwards;
+}
 
 @keyframes flipLeft {
     from {
-        transform: rotateY(0deg);
+        transform: rotateY(0deg) translateX(-165px);
     }
     to {
-        transform: rotateY(-20deg);
+        transform: rotateY(-20deg) translateX(-165px);
     }
 }
 
 @keyframes flipRight {
     from {
-        transform: rotateY(0deg);
+        transform: rotateY(0deg) translateX(165px);
     }
     to {
-        transform: rotateY(20deg);
+        transform: rotateY(20deg) translateX(165px);
     }
+}
+
+
+.book-mode .card {
+    background-image: none !important; /* Elimina el fondo */
+    background-color: transparent !important; /* Asegura que no haya fondo sólido */
+}
+
+.book-mode .card h3,
+.book-mode .card p{
+    color: black !important; /* Asegura que el texto sea negro */
 }

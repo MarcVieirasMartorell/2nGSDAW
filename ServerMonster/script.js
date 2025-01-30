@@ -196,8 +196,27 @@ document.getElementById("next").addEventListener("click", () => {
 
 
 document.getElementById("toggleMode").addEventListener("click", () => {
-    isBookMode = !isBookMode; // Cambia el estado
+    isBookMode = !isBookMode;
+    const bookContainer = document.getElementById("book-container");
+    const carouselContainer = document.querySelector(".carousel-container");
+    const leftPage = document.querySelector(".left-page");
+    const rightPage = document.querySelector(".right-page");
 
+    if (isBookMode) {
+        bookContainer.style.bottom = "0px"; // Sube el libro
+        carouselContainer.classList.add("book-mode");
+
+        // Aplicar animación de paso de página
+        leftPage.classList.add("flip-left");
+        rightPage.classList.add("flip-right");
+    } else {
+        bookContainer.style.bottom = "-300px"; // Baja el libro
+        carouselContainer.classList.remove("book-mode");
+
+        // Reiniciar animación al salir del modo libro
+        leftPage.classList.remove("flip-left");
+        rightPage.classList.remove("flip-right");
+    }
     // Cambiar el texto del botón según el modo actual
     document.getElementById("toggleMode").textContent = isBookMode ? "Modo Carrusel" : "Modo Libro";
 
