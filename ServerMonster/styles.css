@@ -35,12 +35,25 @@ body {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px;
+    color: white;
+    font-family: 'MonHunFont', sans-serif;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 20px;
+    background-image: url('../ServerShare/backgrounds/horizontal_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    border: none;
+    border-radius: 5px;
+    cursor: pointer;    padding: 10px;
     border-radius: 10px;
     color: white;
     display: flex;
     align-items: center;
+}
+.toggleMode button:hover {
+    transform: scale(1.1);
 }
 
 .volume-control label {
@@ -67,6 +80,8 @@ body {
 }
 
 .search-bar button {
+    height: 40px;
+    width: 60px;
     color: white;
     font-family: 'MonHunFont', sans-serif;
     border-radius: 5px;
