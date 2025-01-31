@@ -1,13 +1,12 @@
 let currentIndex = 0;
-let allMonsters = []; // Almacena todos los monstruos para la búsqueda
-let isBookMode = false; // Estado inicial: modo carrusel
+let allMonsters = [];
+let isBookMode = false;
 
-// Fetch de los datos de monstruos desde el servidor
 async function fetchMonsters() {
     try {
         const response = await fetch("http://localhost:3000/monsters");
-        allMonsters = await response.json(); // Guardamos los monstruos en una variable global
-        renderCarousel(allMonsters); // Renderizamos el carrusel inicial con todos los monstruos
+        allMonsters = await response.json();
+        renderCarousel(allMonsters);
     } catch (error) {
         console.error("Error fetching monster data:", error);
     }
@@ -16,7 +15,7 @@ async function fetchMonsters() {
 // Renderiza el carrusel con los datos de los monstruos
 function renderCarousel(monsters) {
     const carousel = document.getElementById("carousel");
-    carousel.innerHTML = ""; // Limpiamos el carrusel antes de renderizar
+    carousel.innerHTML = "";
 
     monsters.forEach((monster, index) => {
         const card = document.createElement("div");
@@ -101,7 +100,7 @@ function filterSuggestions() {
     const searchInput = document.getElementById("searchInput").value.toLowerCase().trim();
     const suggestions = document.getElementById("suggestions");
 
-    suggestions.innerHTML = ""; // Limpia las sugerencias
+    suggestions.innerHTML = "";
 
     if (searchInput === "") {
         suggestions.classList.add("hidden");
@@ -125,10 +124,9 @@ function filterSuggestions() {
                 currentIndex = allMonsters.findIndex(m => m.name[0] === monster.name[0]);
 
                 if (currentIndex !== -1) {
-                    updateCarousel(allMonsters.length); // Actualiza el carrusel
+                    updateCarousel(allMonsters.length);
                 }
 
-                // Oculta las sugerencias
                 suggestions.classList.add("hidden");
             });
             suggestions.appendChild(li);
@@ -205,22 +203,14 @@ document.getElementById("toggleMode").addEventListener("click", () => {
     if (isBookMode) {
         bookContainer.style.bottom = "0px"; // Sube el libro
         carouselContainer.classList.add("book-mode");
-
-        // Aplicar animación de paso de página
-        //leftPage.classList.add("flip-left");
-        //rightPage.classList.add("flip-right");
     } else {
         bookContainer.style.bottom = "-700px"; // Baja el libro
         carouselContainer.classList.remove("book-mode");
-
-        // Reiniciar animación al salir del modo libro
-        ////rightPage.classList.remove("flip-right");
     }
     // Cambiar el texto del botón según el modo actual
-    document.getElementById("toggleMode").textContent = isBookMode ? "Modo Carrusel" : "Modo Libro";
+    document.getElementById("toggleMode").textContent = isBookMode ? "Carousel Mode" : "Book Mode";
 
-    updateCarousel(allMonsters.length); // Actualiza la vista con el nuevo modo
+    updateCarousel(allMonsters.length);
 });
 
-// Inicialización
 fetchMonsters();
