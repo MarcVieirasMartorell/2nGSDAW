@@ -269,6 +269,9 @@ body {
 .hidden {
     display: none;
 }
+.book-mode {
+color: #000;
+}
 
 #book-container {
     position: absolute;
@@ -287,13 +290,13 @@ body {
 
 
 .book-mode .left-page {
-    transform: rotateY(0deg) translateX(-165px); /* Aumenta la separación */
+    transform: rotateY(0deg) translateX(-180px); /* Aumenta la separación */
 
     animation: flipLeft 0.6s ease-in-out forwards;
 }
 
 .book-mode .right-page {
-    transform: rotateY(0deg) translateX(165px); /* Aumenta la separación */
+    transform: rotateY(0deg) translateX(180px); /* Aumenta la separación */
 
     animation: flipRight 0.6s ease-in-out forwards;
 }

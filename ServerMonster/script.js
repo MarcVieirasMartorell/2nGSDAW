@@ -53,11 +53,11 @@ function updateCarousel(totalMonsters) {
             if (index === currentIndex) {
                 card.classList.add("left-page");
                 card.style.opacity = "1";
-                card.style.transform = "translateX(-165px) scale(1)";
+                card.style.transform = "translateX(-180px) scale(1)";
             } else if (index === currentIndex + 1 && index < totalMonsters) {
                 card.classList.add("right-page");
                 card.style.opacity = "1";
-                card.style.transform = "translateX(165px) scale(1)";
+                card.style.transform = "translateX(180px) scale(1)";
             }
         });
     }
@@ -207,15 +207,14 @@ document.getElementById("toggleMode").addEventListener("click", () => {
         carouselContainer.classList.add("book-mode");
 
         // Aplicar animación de paso de página
-        leftPage.classList.add("flip-left");
-        rightPage.classList.add("flip-right");
+        //leftPage.classList.add("flip-left");
+        //rightPage.classList.add("flip-right");
     } else {
-        bookContainer.style.bottom = "-300px"; // Baja el libro
+        bookContainer.style.bottom = "-700px"; // Baja el libro
         carouselContainer.classList.remove("book-mode");
 
         // Reiniciar animación al salir del modo libro
-        leftPage.classList.remove("flip-left");
-        rightPage.classList.remove("flip-right");
+        ////rightPage.classList.remove("flip-right");
     }
     // Cambiar el texto del botón según el modo actual
     document.getElementById("toggleMode").textContent = isBookMode ? "Modo Carrusel" : "Modo Libro";
