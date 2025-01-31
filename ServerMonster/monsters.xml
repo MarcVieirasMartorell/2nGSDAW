@@ -120,7 +120,7 @@
     <monster>
         <name>Radobaan</name>
         <image>..\ServerShare\images\radobaan.png</image>
-        <type>Armored</type>
+        <type>Brute Wyvern</type>
         <threat_level>Low</threat_level>
         <weakness>Water</weakness>
         <habitat>Wildspire Waste</habitat>
